@@ -1,0 +1,566 @@
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font-sans: 'Rubik', sans-serif;
+  --font-cardo: "Cardo", sans-serif;
+}
+
+/* Apply default font and font size to the whole page */
+body {
+  font-family: var(--font-cardo);
+  font-size: 14px;
+  background-color: #fff;
+  position: absolute;
+  color:#333;
+  font-weight: 50px;
+}
+/* Style the header element */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  color:#0062cc;
+}
+
+/* Style the logo image */
+header img {
+  height: 40px;
+}
+
+/* Style the navigation links */
+header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul a {
+  color:#fff;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+header ul a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #88de5d;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+
+/* Style the header icons section */
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons a {
+  color: #333;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.header-icons a i {
+  font-size: 24px;
+}
+
+/* Hide the menu icon on larger screens */
+#menu-icon {
+  display: flex;
+  text-decoration: none;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  
+  header ul {
+    margin-top: 20px;
+  }
+  
+  header ul a {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .header-icons {
+    margin-top: 20px;
+  }
+  
+  #menu-icon {
+    display: block;
+    font-size: 24px;
+    margin-left: auto;
+  }
+}
+#hero-section {
+  padding: 90px 40px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+
+.hero-text h2 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 0;
+}
+.hero-text h2:hover {
+    color: #88de5d;
+}
+
+.hero-text p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.hero-text p:hover {
+    color: #88de5d
+}
+
+.subscribe {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  font-family: var(--font-cardo);
+  border-radius: 15px;
+  border: 3px solid #0062cc;
+}
+
+.subscribe button {
+  padding: 15px 25px;
+  background-color:#0062cc;
+  color: #fff;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 15px;
+  font-family: var(--font-cardo);
+}
+.subscribe button:hover {
+    background-color: #88de5d;
+}
+
+.hero-img img {
+  max-width: 500px;
+  height: auto;
+}
+
+.contents {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.contents div {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.contents div img {
+  width: 100px;
+}
+
+.contents div p {
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.contents div h4 {
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+#categories {
+  padding: 90px 40px;
+  text-align: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+#categories h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #555;
+}
+#categories h3:hover{
+    color: #88de5d;
+}
+#categories h1 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+#categories h1:hover {
+  color:#88de5d;
+}
+
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categories-container div {
+  height: 250px;
+  width: 250px;
+  margin: 20px;
+  padding-top: 30px;
+  /* background-color: #fff; */
+  box-shadow: 0 0 5px #aaa;
+  border-radius: 20px;
+  transition: background-color 0.2s ease-in-out;
+  background-color: #fff;
+}
+.categories-container div:hover {
+  background-color: #88de5d;
+}
+
+.categories-container h3 {
+  margin: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  /* color: #333; */
+}
+.item {
+  color: white;
+}
+.item:hover {
+  color: white !important;
+}
+
+.categories-container img {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+}
+#categories button {
+    width: 200px;
+    height: 50px;
+    background-color:#0062cc;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+#categories button:hover {
+  color: white;
+  background-color: #88de5d;
+}
+#categories a{
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--font-cardo);
+    font-size: 20px;
+}
+
+
+#courses-section {
+  padding: 90px 40px;
+  margin: 50px auto;
+  width: 80%;
+  text-align: center;
+}
+
+#courses-section a:hover {
+  color:#88de5d;
+}
+.read-more {
+  color: white
+}
+.read-more:hover{
+  color: #fff !important;
+}
+
+/* Style the headings */
+#courses-section h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+#courses-section h1 {
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.courses-container div {
+  border-radius: 15px;
+  width: 24%;
+  margin-bottom: 40px;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.courses-container div:hover {
+  transform: scale(1.1);
+}
+
+
+.courses-container div img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+.courses-container div h5 {
+  margin-bottom: 10px;
+  color: #c0392b;
+  font-size: 24px;
+}
+
+
+.courses-container div h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.courses-container div h4 {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.courses-container div .start {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.section-bottom {
+  background-color:#0062cc;
+  padding: 9px 35px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+#courses-section button:hover {
+  background-color: #88de5d;
+}
+#buynow {
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-cardo);
+}
+#courses-section .head {
+  color:#333;
+  text-decoration: none;
+}
+
+.more {
+  padding: 5px 20px;
+  background-color:#0062cc;
+  font-family: var(--font-cardo);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.more button:hover{
+  background-color: #88de5d;
+}
+
+/* About Section */
+#about {
+  background-color: white;
+  padding: 80px 0;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.texts {
+  width: 50%;
+}
+
+.texts h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.texts h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.texts p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.section-bottom {
+  display: inline-block;
+  background-color:#0062cc;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.section-bottom:hover {
+  background-color: #88de5d;
+}
+
+.about-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+
+
+
+.footer {
+  background-color: white; 
+  padding: 50px 0; 
+}
+
+.footer-container {
+  max-width: 1200px; 
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.first, .second, .third, .last {
+  width: 20%; 
+}
+
+
+.footer a {
+  color:#333; 
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.footer a:hover{
+  color:#88de5d;
+}
+
+
+.news-letter input[type="email"] {
+  font-family: 'Shantell Sans', cursive;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #0062cc;
+}
+
+.news-letter button {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color:#0062cc; 
+  color: #fff; 
+}
+.news-letter button:hover {
+  background-color: #88de5d;
+}
+
+.news-letter input[type="email"]:hover {
+  opacity: 0.8;
+}
+
+.footer img {
+  width: 100px; 
+  margin-top: 20px;
+}
+
+
+
+
+
+
